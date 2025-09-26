@@ -5,23 +5,18 @@ spring:
 
    devtools:
       restart:
-         enabled: true
+         enabled: true		
       livereload:
          enabled: true
 
-   # aop
-   aop:
-      auto: true
-      proxy-target-class: true
-
    mvc:
-      static-path-pattern: /assets/** 
+      static-path-pattern: /assets/**	
       view:
          prefix: /WEB-INF/views/
          suffix: .jsp
 
    web:
-      resources: 
+      resources:
          static-locations: [classpath:assets/, file:/jblog-uploads/]
 
    servlet:
@@ -31,14 +26,10 @@ spring:
          max-request-size: 104857600
          file-size-threshold: 5242880
 
-   # message resource(i18n)
+   # message resources(i18n)
    messages:
       basename: messages/message
       encoding: utf-8
-
-# mybatis
-mybatis: 
-   config-location: classpath:mybatis/configuration.xml
 
 # server configuration
 server:
@@ -47,5 +38,5 @@ server:
       context-path: /jblog06
 
 # logging
-logging: 
+logging:
    config: classpath:logback.xml
