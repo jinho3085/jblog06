@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="category">
+
+	<!-- 블로그 카테고리 리스트 조회 -->
+	<select id="findByBlogId" parameterType="string" resultType="categoryvo" >
+		<![CDATA[
+		SELECT no, name, description, blog_id 
+		FROM category WHERE blog_id = #{blogId} 
+		ORDER BY no ASC
+		]]>
+	</select>
+	
+	<!-- 블로그 생성 시 기본 카테고리 추가 -->
+	<insert id="insertDefault" parameterType="string">
+		<![CDATA[
+			INSERT INTO category (name, description, blog_id) 
+			VALUES ('기본 카테고리', '블로그 생성 시 자동 추가', #{blogId})
+		]]>
+	</insert>
+	
+</mapper>

@@ -37,6 +37,19 @@
 			<scope>test</scope>
 		</dependency>
 		
+				<!-- myBatis Starter -->
+		<dependency>
+		    <groupId>org.mybatis.spring.boot</groupId>
+		    <artifactId>mybatis-spring-boot-starter</artifactId>
+		    <version>3.0.4</version>
+		</dependency>
+		
+		<!-- mariadb jdbc driver -->
+		<dependency>
+		    <groupId>org.mariadb.jdbc</groupId>
+		    <artifactId>mariadb-java-client</artifactId>
+		</dependency>
+		
 		<!-- jstl -->
 		<dependency>
 			<groupId>jakarta.el</groupId>
